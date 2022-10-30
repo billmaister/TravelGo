@@ -1,8 +1,12 @@
+import Navbar from "../../components/Navbar/Navbar";
 import styles from "./Home.module.css";
 
 function Home() {
     return (
-        <div className={styles.txt}> Home Page </div>
+        <>
+            <Navbar />
+            <div className={styles.txt}> Home Page </div>
+        </>
     );
 }
 
