@@ -1,0 +1,21 @@
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+.nav{
+    font-family: 'Nunito Sans';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+.logo{
+    flex: 1;
+}
+.navItem{
+    margin-left: 5%;
+    text-decoration: none;
+    color: #171717;
+}

@@ -1,0 +1,28 @@
+.logo{
+    position: relative;
+}
+.txt{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #171717;
+    mix-blend-mode: darken;
+}
+.circle{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #029BC5;
+    border: 5px solid #171717;
+    left: 140px;
+}
+
+
+
+
+
+
+
+
