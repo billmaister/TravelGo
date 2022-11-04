@@ -5,16 +5,22 @@
     align-items: center;
     margin: 2%;
 }
+.searchbarContainer{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .searchbar{
+    flex: 0 0 40%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     font-family: 'Nunito';
     border-radius: 30px;
-    width: 30%;
     padding: 1%;
 }
 .submitBtn{
     position: absolute;
-    right: 45px;
+    right: 3%;
     border: none;
     border-radius: 50%;
     background-color: #029BC5;
