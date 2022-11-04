@@ -1,0 +1,38 @@
+.headContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+}
+.searchbarContainer{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.searchbar{
+    flex: 0 0 40%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: 'Nunito';
+    border-radius: 30px;
+    padding: 1%;
+}
+.submitBtn{
+    position: absolute;
+    right: 3%;
+    border: none;
+    border-radius: 50%;
+    background-color: #029BC5;
+    color: white;
+    font-family: 'Nunito';
+    padding: 0.5%;
+    cursor: pointer;
+}
+.submitBtn:hover{
+    background-color: #029bc5cf;
+}
+.submitBtn:disabled{
+    background-color: #999;
+    cursor: not-allowed;
+}
