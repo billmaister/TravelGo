@@ -1,0 +1,61 @@
+.flexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexItem{
+    flex: 15% 1;
+    width: 100%;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+    text-align: center;
+    margin: 8%;
+    margin-top: 2%;
+    margin-bottom: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    font-size: 200%;
+    font-family: 'Josefin Sans';
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.europe{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/src/images/ricardo-gomez-angel-J82dSkOxvY8-unsplash.jpg');
+}
+.europe:hover{
+    background-image: url('/src/images/ricardo-gomez-angel-J82dSkOxvY8-unsplash.jpg');
+}
+.asia{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/src/images/liam-burnett-blue-xBnqIf2vy7M-unsplash.jpg');
+}
+.asia:hover{
+    background-image: url('/src/images/liam-burnett-blue-xBnqIf2vy7M-unsplash.jpg');
+}
+.africa{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/src/images/sergey-pesterev-9-5-WYEBDz0-unsplash.jpg');
+}
+.africa:hover{
+    background-image: url('/src/images/sergey-pesterev-9-5-WYEBDz0-unsplash.jpg');
+}
+.namerica{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/src/images/jonas-elia-x6HHgq2zDvI-unsplash.jpg');
+}
+.namerica:hover{
+    background-image: url('/src/images/jonas-elia-x6HHgq2zDvI-unsplash.jpg');
+}
+.samerica{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/src/images/jonatan-lewczuk-MAN-afLJt2E-unsplash.jpg');
+}
+.samerica:hover{
+    background-image: url('/src/images/jonatan-lewczuk-MAN-afLJt2E-unsplash.jpg');
+}
+.australia{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/src/images/david-clode-CIMk0FSOrAE-unsplash.jpg');
+}
+.australia:hover{
+    background-image: url('/src/images/david-clode-CIMk0FSOrAE-unsplash.jpg');
+}
