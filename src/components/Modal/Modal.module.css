@@ -1,0 +1,38 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modalContainer {
+  width: 70%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+}
+.closeBtn {
+  position: absolute;
+  right: 1%;
+  top: 0%;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1%;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.closeBtn:hover{
+  opacity: 0.5;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}

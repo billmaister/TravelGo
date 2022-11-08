@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Country from "./pages/Country/Country";
 import Destinations from "./pages/Destinations/Destinations";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
@@ -11,6 +12,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/destinations" element={<Destinations />} />
+        <Route path="/destinations/:country" element={<Country />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

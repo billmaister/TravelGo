@@ -1,3 +1,7 @@
+.countryDescription{
+    font-family: 'Nunito', sans-serif;
+    padding: 2%;
+}
 .countriesContainer{
     margin: 2%;
     box-shadow: 1px 1px 10px #ccc;
@@ -27,18 +31,6 @@
     flex-direction: column;
     text-align: center;
 }
-.like{
-    position: absolute;
-    right: -5%;
-    top: -5%;
-    border: 2px solid #555;
-    border-radius: 50%;
-    padding: 2%;
-    cursor: pointer;
-}
-.like:hover{
-    background-color: #555;
-}
 .imgContainer {
     position: relative;
     width: 100%;
@@ -55,6 +47,22 @@
     padding-top: 10%;
     font-family: 'Nunito Sans';
 }
-.caption span{
-    margin-right: 3%;
+.caption .name{
+    font-size: large;
+    font-weight: bold;
+}
+.caption .title{
+    font-size: small;
+}
+.placeDescription{
+    border-top: 1px solid #555;
+    padding-top: 3%;
+    font-family: 'Nunito', sans-serif;
+}
+.placeLocation span{
+    margin-right: 1%;
+}
+.placeLocation{
+    font-family: 'Nunito', sans-serif;
+    color: #029BC5;
 }
