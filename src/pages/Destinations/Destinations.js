@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Continents from '../../components/Continents/Continents';
 import Countries from '../../components/Countries/Countries';
 import MainHeader from '../../components/MainHeader/MainHeader';
+import Navbar from '../../components/Navbar/Navbar';
 import styles from './Destinations.module.css';
 
 function Destinations() {
@@ -19,7 +20,8 @@ function Destinations() {
         selectContinent(continent);
     });
     return (
-        <div className={styles.container}>
+        <div>
+            <Navbar />
             <div className={styles.headContainer}>
                 <MainHeader title='Where do you want to be?' />
                 <div className={styles.searchbarContainer}>

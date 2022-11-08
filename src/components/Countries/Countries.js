@@ -22,7 +22,7 @@ function Countries({ continent }) {
             <MainHeader title='Discover Countries' />
             <ul>
                 {countries.map((country) =>
-                    <Link to='/destination/:country' className={styles.card}>
+                    <Link to={`/destinations/${country}`} className={styles.card}>
                         <li key={country}>
                             <div className={styles.imgContainer}>
                                 {/* fill src attr with image url from api */}
