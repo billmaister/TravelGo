@@ -1,6 +1,18 @@
 .footerContainer{
-    padding: 2%;
+    padding: 5%;
     padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footerContainer > div{
+    flex: 1;
+}
+.contactInfo span{
+    padding: 1%;
+}
+.contactItem{
+    padding: 2%;
 }
 .caption, .copyright{
     font-family: 'Nunito sans', sans-serif;
@@ -8,5 +20,5 @@
 .copyright{
     text-align: center;
     font-size: 80%;
-    padding-top: 7%;
+    padding: 4%;
 }
