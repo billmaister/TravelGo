@@ -2,6 +2,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
 import MainHeader from '../../components/MainHeader/MainHeader';
 import Modal from '../../components/Modal/Modal';
 import Navbar from '../../components/Navbar/Navbar';
@@ -68,6 +69,7 @@ function Country() {
                     {selectedPlace.location}
                 </p>
             </Modal>}
+            <Footer />
         </div>
     );
 }

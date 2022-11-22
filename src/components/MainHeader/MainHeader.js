@@ -1,8 +1,8 @@
 import styles from './MainHeader.module.css';
 
-function MainHeader({ title }) {
+function MainHeader({ title, className }) {
     return (
-        <h1 className={styles.head}> {title} </h1>
+        <h1 className={`${styles.head} ${className}`}> {title} </h1>
     );
 }
 

@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Continents from '../../components/Continents/Continents';
 import Countries from '../../components/Countries/Countries';
+import Footer from '../../components/Footer/Footer';
 import MainHeader from '../../components/MainHeader/MainHeader';
 import Navbar from '../../components/Navbar/Navbar';
 import styles from './Destinations.module.css';
@@ -11,14 +12,11 @@ function Destinations() {
     const countriesRef = useRef();
     const handleChangeDestination = (e) => {
         setDestination(e.target.value);
-    }
+    };
     const selectContinent = (newContinent) => {
-        countriesRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         setContinent(newContinent);
-    }
-    useEffect(() => {
-        selectContinent(continent);
-    });
+        countriesRef.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    };
     return (
         <div>
             <Navbar />
@@ -37,6 +35,7 @@ function Destinations() {
             </div>
             <Continents selectContinent={selectContinent}/>
             <div ref={countriesRef}>{continent && <Countries continent={continent}/>}</div>
+            <Footer />
         </div>
     );
 }

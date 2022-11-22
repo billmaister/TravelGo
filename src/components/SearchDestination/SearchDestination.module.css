@@ -1,0 +1,51 @@
+.searchContainer{
+    width: 90%;
+    height: 40%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(255, 255, 255, 0.1)), url('/src/images/nature.jpg');
+    background-size: cover;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    border-top-left-radius: 150px;
+}
+.searchContent{
+    padding: 7%;
+}
+.searchTxt{
+    font-size: 200%;
+    color: white;
+}
+.searchbarContainer{
+    margin-top: 3%;
+}
+.searchbar{
+    font-family: 'Nunito';
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 1%;
+    padding-right: 20%;
+}
+.searchbar::placeholder{
+    color: white;
+}
+.submitBtn{
+    position: absolute;
+    left: 35%;
+    margin: 0.2%;
+    border: none;
+    border-radius: 50%;
+    background-color: #029BC5;
+    color: white;
+    font-family: 'Nunito';
+    padding: 0.5%;
+    cursor: pointer;
+}
+.submitBtn:hover{
+    background-color: #029bc5cf;
+}
+.submitBtn:disabled{
+    background-color: #999;
+    cursor: not-allowed;
+}
