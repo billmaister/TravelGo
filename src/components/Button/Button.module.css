@@ -4,4 +4,10 @@
     font-family: 'Nunito Sans';
     color: #029BC5 !important;
     padding: 10px;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+.btn:hover{
+    background-color: #029BC5;
+    color: white !important;
 }

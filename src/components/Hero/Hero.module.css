@@ -1,0 +1,28 @@
+.heroContainer{
+    width: 100vw;
+    height: 90vh;
+    background-image: url('/src/images/hero.jpg');
+    background-size: cover;
+}
+.heroContent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.findBtn {
+    margin-top: 5%;
+    border-color: white;
+    background-color: transparent !important;
+    color: white !important;
+}
+.findBtn:hover {
+    background-color: white !important;
+    color: black !important;
+}
+.heroTxt{
+    font-size: 200%;
+    color: white !important;
+    font-weight: bold;
+}

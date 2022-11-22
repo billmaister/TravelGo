@@ -1,0 +1,49 @@
+.caption{
+    font-family: 'Nunito Sans';
+}
+.scrollContainer{
+    margin: 5%;
+    box-shadow: 1px 1px 10px #ccc;
+    padding: 3%;
+}
+.elementsContainer{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 3%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.elementsContainer::-webkit-scrollbar {
+    display: none;
+}
+.element{
+    position: relative;
+    flex: 0 0 20%;
+    height: 240px;
+    padding: 1%;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+.element:hover {
+    opacity: 0.7;
+}
+.element img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.elementName {
+    position: absolute;
+    padding: 1%;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    font-family: 'Nunito Sans';
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+    box-shadow: 2px 2px 10px black;
+    font-weight: bold;
+}

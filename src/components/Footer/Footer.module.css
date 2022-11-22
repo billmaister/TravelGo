@@ -1,0 +1,12 @@
+.footerContainer{
+    padding: 2%;
+    padding-top: 10%;
+}
+.caption, .copyright{
+    font-family: 'Nunito sans', sans-serif;
+}
+.copyright{
+    text-align: center;
+    font-size: 80%;
+    padding-top: 7%;
+}
