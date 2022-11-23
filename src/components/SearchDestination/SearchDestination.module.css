@@ -1,3 +1,16 @@
+.err{
+    padding: 1%;
+    padding-left: 1%;
+    margin-top: 1%;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 30%;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+.err span{
+    padding-right: 2%;
+}
 .searchContainer{
     width: 90%;
     height: 40%;

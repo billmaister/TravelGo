@@ -1,0 +1,32 @@
+.actContainer{
+    background-color: #171717;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.actImg{
+    flex: 30%;
+}
+.actDescription{
+    flex: 70%;
+    padding: 3%;
+}
+.actDescription span{
+    padding-right: 2%;
+}
+.actDescription h1{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-bottom: 8%;
+}
+.actContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overview, .info{
+    padding-bottom: 8%;
+}

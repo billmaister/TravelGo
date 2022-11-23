@@ -26,12 +26,11 @@
   padding: 1%;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin: 1%;
 }
 .closeBtn:hover{
   opacity: 0.5;
 }
-.content {
-  display: flex;
-  flex-direction: column;
-  padding: 5%;
-}
+

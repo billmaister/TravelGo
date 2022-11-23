@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Activity from "../../components/Activity/Activity";
 import Footer from "../../components/Footer/Footer";
@@ -7,34 +7,37 @@ import Modal from "../../components/Modal/Modal";
 import Navbar from "../../components/Navbar/Navbar";
 import ScrollingBox from "../../components/ScrollingBox/ScrollingBox";
 import SearchDestination from "../../components/SearchDestination/SearchDestination";
-//import styles from "./Home.module.css";
+import styles from "./Home.module.css";
 
 function Home() {
     const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [activityName, setActivityName] = useState('');
-    const [recomCountries, setRecomCountries] = useState([
-        {name: 'Finland'},
-        {name: 'Sweden'},
-        {name: 'USA'},
-        {name: 'England'},
-        {name: 'Germany'},
-        {name: 'Italy'},
-        {name: 'Spain'},
-        {name: 'Greece'},
-        {name: 'Belgium'},
-        {name: 'Canada'}
-    ]);
-    const handleClickCountry = (name) => {
+    const [activityId, setActivityId] = useState('');
+    const [recomCountries, setRecomCountries] = useState([]);
+    const [recomActivities, setRecomActivities] = useState([]);
+    const handleClickCountry = (name, id) => {
         navigate(`/destinations/${name}`);
     };
-    const handleClickActivity = (name) => {
+    const handleClickActivity = (name, id) => {
         setIsModalOpen(true);
-        setActivityName(name);
+        setActivityId(id);
     };
     const toggleModal = () => {
         setIsModalOpen((prev) => !prev);
     };
+    const getData = async () => {
+        try{
+            await fetch('/api/countries/recommendations')
+                .then((res) => res.json())
+                .then((dataObj) => setRecomCountries(dataObj.data));
+            await fetch('/api/events/recommendations')
+                .then((res) => res.json())
+                .then((dataObj) => setRecomActivities(dataObj.data));
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+    useEffect(() => { getData() }, []);
     return (
         <>
             <Navbar />
@@ -49,11 +52,11 @@ function Home() {
             <ScrollingBox
                 title='Latest Activities'
                 caption='What kind of events do you like?'
-                elements={recomCountries}
+                elements={recomActivities}
                 onClick={handleClickActivity}
             />
-            <Modal open={isModalOpen} onClose={toggleModal}>
-                <Activity name={activityName} />
+            <Modal open={isModalOpen} onClose={toggleModal} className={styles.modal}>
+                <Activity id={activityId} />
             </Modal>
             <Footer />
         </>

@@ -26,13 +26,13 @@ function Continents({ selectContinent }) {
             </button>
             <button
                 className={`${styles.flexItem} ${styles.namerica}`}
-                onClick={chooseContinent('north_america')}
+                onClick={chooseContinent('north america')}
                 >
                     North America
             </button>
             <button
                 className={`${styles.flexItem} ${styles.samerica}`}
-                onClick={chooseContinent('south_america')}
+                onClick={chooseContinent('south america')}
                 >
                     South America
             </button>
