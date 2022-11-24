@@ -37,6 +37,7 @@
     border-radius: 10px;
 }
 .elementName {
+    max-width: 80%;
     position: absolute;
     padding: 1%;
     bottom: 10%;

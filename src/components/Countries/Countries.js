@@ -6,19 +6,35 @@ import MainHeader from "../MainHeader/MainHeader";
 import { Link } from "react-router-dom";
 import ErrorBoundry from "../ErrorBoundry/ErrorBoundry";
 import { useAppContext } from "../../context/appContext";
+import axios from "axios";
 
 function Countries({ continent }) {
   const [err, setErr] = useState({ status: false, message: "" });
-  const [color, setColor] = useState("gray");
-  const { user } = useAppContext();
-  // get countries list using continent name with useEffect and API call
-  //maybe an object {country: '', isFavorite: ''}
+  const [colors, setColors] = useState([]);
+  const { user, token } = useAppContext();
   const [countries, setCountries] = useState([]);
-  //add a country to favorite list(if logged in)
-  const handleFavorites = (e) => {
+  const handleFavourites = (countryID, index) => async (e) => {
     e.stopPropagation();
     e.preventDefault();
-    setColor("red");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+    };
+    const data = { id: countryID };
+    colors[index] ?
+      await axios.delete('api/countries/favourite', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        },
+        data: {
+          id: countryID,
+        }
+      }) :
+      await axios.post('api/countries/favourite', data, config);
+    const newColors = colors.slice();
+    newColors[index] = !newColors[index];
+    setColors(newColors);
   };
   const getCountries = async () => {
     try {
@@ -49,7 +65,7 @@ function Countries({ continent }) {
         <div className={styles.countriesContainer}>
           <MainHeader title="Discover Countries" />
           <ul>
-            {countries.map((country) => (
+            {countries.map((country, index) => (
               <Link
                 to={`/destinations/${country.name}`}
                 className={styles.card}
@@ -61,8 +77,8 @@ function Countries({ continent }) {
                       <FontAwesomeIcon
                         className={styles.like}
                         icon={faHeart}
-                        color={color}
-                        onClick={handleFavorites}
+                        color={!colors[index] ? "gray" : "red"}
+                        onClick={handleFavourites(country._id, index)}
                       />
                     )}
                   </div>

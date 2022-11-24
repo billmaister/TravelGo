@@ -20,7 +20,7 @@ function Navbar() {
             <Link to="/" className={styles.navItem}>
               Home
             </Link>
-            <Link to="/" className={styles.navItem}>
+            <Link to="/favourites" className={styles.navItem}>
               My Favorites
             </Link>
             <Link to="/" onClick={logoutUser} className={styles.navItem}>

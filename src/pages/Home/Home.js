@@ -37,7 +37,10 @@ function Home() {
             console.log(err.message);
         }
     };
-    useEffect(() => { getData() }, []);
+    useEffect(() => {
+        window.scrollTo(0,0);
+        getData();
+    }, []);
     return (
         <>
             <Navbar />

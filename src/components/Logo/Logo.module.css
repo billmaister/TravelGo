@@ -17,6 +17,10 @@
     background: #029BC5;
     border: 5px solid #171717;
     left: 140px;
+    top: 10px;
+}
+.navItem{
+    text-decoration: none;
 }
 
 
