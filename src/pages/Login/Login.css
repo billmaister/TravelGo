@@ -1,0 +1,12 @@
+body {
+  display: grid;
+  min-height: 100vh;
+}
+
+#main-container {
+  place-items: center center;
+}
+
+#login-form {
+  max-width: 330px;
+}
