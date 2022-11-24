@@ -76,8 +76,9 @@ function Favourites(){
                 <Link
                   to={`/destinations/${favourite.name}`}
                   className={styles.card}
+                  key={index}
                 >
-                  <li key={favourite}>
+                  <li>
                     <div className={styles.imgContainer}>
                       <img src={favourite.urlImage} alt={favourite.name} />
                       {user && (

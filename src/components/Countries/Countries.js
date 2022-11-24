@@ -69,8 +69,9 @@ function Countries({ continent }) {
               <Link
                 to={`/destinations/${country.name}`}
                 className={styles.card}
+                key={index}
               >
-                <li key={country}>
+                <li>
                   <div className={styles.imgContainer}>
                     <img src={country.urlImage} alt={country.name} />
                     {user && (

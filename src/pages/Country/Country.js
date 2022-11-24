@@ -75,8 +75,8 @@ function Country() {
                         <MainHeader title={`Places to See in ${capitalizeFirstLetter(params.country)}`} />
                         <ul>
                             {cities.map((city) =>
-                                <div className={styles.card} onClick={toggleModal(city)}>
-                                    <li key={city.name}>
+                                <div className={styles.card} onClick={toggleModal(city)} key={city.name}>
+                                    <li>
                                         <div className={styles.imgContainer}>
                                             {/* fill src attr with image url from api */}
                                             <img src={city.urlImage} alt={city.name} />
