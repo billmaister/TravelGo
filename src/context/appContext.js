@@ -53,7 +53,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: SETUP_USER_BEGIN });
     try {
       const { data } = await axios.post(
-        `http://localhost:5000/api/auth/${endPoint}`,
+        `${process.env.REACT_APP_API_URL}api/auth/${endPoint}`,
         currentUser
       );
       const { user, token } = data;

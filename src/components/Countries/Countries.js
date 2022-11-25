@@ -18,27 +18,36 @@ function Countries({ continent }) {
     e.preventDefault();
     const config = {
       headers: {
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
       },
     };
     const data = { id: countryID };
-    colors[index] ?
-      await axios.delete('api/countries/favourite', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        },
-        data: {
-          id: countryID,
-        }
-      }) :
-      await axios.post('api/countries/favourite', data, config);
+    colors[index]
+      ? await axios.delete(
+          `${process.env.REACT_APP_API_URL}api/countries/favourite`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+            data: {
+              id: countryID,
+            },
+          }
+        )
+      : await axios.post(
+          `${process.env.REACT_APP_API_URL}api/countries/favourite`,
+          data,
+          config
+        );
     const newColors = colors.slice();
     newColors[index] = !newColors[index];
     setColors(newColors);
   };
   const getCountries = async () => {
     try {
-      await fetch(`/api/countries/countries/${continent}`)
+      await fetch(
+        `${process.env.REACT_APP_API_URL}api/countries/countries/${continent}`
+      )
         .then((res) => res.json())
         .then((dataObj) => {
           if (dataObj.msg) {
